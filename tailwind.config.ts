@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				rentmate: {
+					primary: '#38B2AC',
+					secondary: '#F56565',
+					tertiary: '#4FD1C5',
+					lightGray: '#F7FAFC',
+					darkGray: '#4A5568'
 				}
 			},
 			borderRadius: {
