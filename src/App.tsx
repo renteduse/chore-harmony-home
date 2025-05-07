@@ -15,6 +15,12 @@ import Dashboard from "./pages/Dashboard";
 import Household from "./pages/Household";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
+import Chores from "./pages/Chores";
+import ChoreForm from "./pages/ChoreForm";
+import Expenses from "./pages/Expenses";
+import ExpenseForm from "./pages/ExpenseForm";
+import CalendarView from "./pages/CalendarView";
+import Settlements from "./pages/Settlements";
 
 const queryClient = new QueryClient();
 
@@ -74,7 +80,12 @@ const App = () => (
                 <Route element={<Layout><Outlet /></Layout>}>
                   <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/household" element={<Household />} />
-                  {/* Add more routes as needed */}
+                  <Route path="/chores" element={<Chores />} />
+                  <Route path="/chores/new" element={<ChoreForm />} />
+                  <Route path="/expenses" element={<Expenses />} />
+                  <Route path="/expenses/new" element={<ExpenseForm />} />
+                  <Route path="/calendar" element={<CalendarView />} />
+                  <Route path="/settlements" element={<Settlements />} />
                 </Route>
               </Route>
               
