@@ -7,12 +7,12 @@ const API_URL = "http://localhost:5000/api";
 // Helper function to handle API errors
 const handleError = (error: any) => {
   console.error("API Error:", error);
-  const errorMessage = error.response?.data?.message || "An unexpected error occurred";
+  const errorMessage = error.response?.data?.message || error.message || "An unexpected error occurred";
   toast.error(errorMessage);
   return Promise.reject(errorMessage);
 };
 
-// Set up axios with authorization headers
+// Set up headers with authorization headers
 const getHeaders = () => {
   const token = localStorage.getItem("token");
   return {
